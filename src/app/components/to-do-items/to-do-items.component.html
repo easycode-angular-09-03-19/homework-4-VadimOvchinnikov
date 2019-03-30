@@ -1,0 +1,14 @@
+<div class="item-list">
+  <div class="item-list__header">
+    <h1 class="item-list__header-title">To-do List</h1>
+    <button (click)="onCompleteAllTasks()">Complete all tasks</button>
+  </div>
+
+  <ng-container *ngFor="let item of items">
+    <app-to-do-item [item]="item" (itemDeleted)="onItemDeleted($event)"></app-to-do-item>
+  </ng-container>
+
+  <button class="icon-button icon-button--add item-list__add-button" *ngIf="!isAdding" (click)="onItemAdding()">Add new item</button>
+
+  <app-new-to-do-item *ngIf="isAdding" (itemValueAdded)="onItemValueAdded($event)"></app-new-to-do-item>
+</div>

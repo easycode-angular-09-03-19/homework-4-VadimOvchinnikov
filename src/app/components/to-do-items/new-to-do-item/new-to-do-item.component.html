@@ -1,0 +1,9 @@
+<form [formGroup]="form" class="to-do-item">
+  <div class="form-control">
+    <input type="text" class="form-control__control to-do-item__textbox" formControlName="valueTextBox" />
+    <div class="form-control__validation-message" *ngIf="valueTextBox.touched && valueTextBox.invalid">Please enter some value here.</div>
+  </div>
+
+  <button class="icon-button icon-button--save to-do-item__save-button" (click)="onSave()"></button>
+  <button class="icon-button icon-button--close to-do-item__close-button" (click)="onCancelAdding()"></button>
+</form>

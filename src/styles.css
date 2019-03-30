@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+* {
+  font-family: "Open Sans";
+}
+
+h1 {
+  font-size: 40px;
+  margin: 3px 5px;
+}
+
+label,
+input[type=text] {
+  font-size: 20px;
+  padding: 2px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+label {
+  border-color: transparent;
+}
+
+input[type=text].ng-invalid {
+  border-color: #ff0000;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input[type=checkbox] {
+  width: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 18px;
+  border: 1px solid black;
+  flex-shrink: 0;
+}
+
+  input[type=checkbox]:checked:after {
+    margin-left: 4px;
+    margin-top: -3px;
+    width: 7px;
+    height: 12.5px;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: "";
+    display: inline-block;
+  }
+
+button {
+  padding: 5px;
+}
+
+.icon-button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+  .icon-button:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+.icon-button--add:before {
+  content: "\f067";
+}
+
+.icon-button--edit:before {
+  content: "\f303";
+}
+
+.icon-button--save:before {
+  content: "\f00c";
+}
+
+.icon-button--close:before {
+  content: "\f00d";
+}
+
+.icon-button--delete:before {
+  content: "\f2ed";
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.form-control__validation-message {
+  color: #ff0000;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  background-color: #ffeacf;
+}

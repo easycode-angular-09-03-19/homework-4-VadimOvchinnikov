@@ -1,0 +1,28 @@
+.to-do-item {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  width: 400px;
+  margin-top: 2px;
+}
+
+.to-do-item__label {
+  margin-left: 3px;
+}
+
+.to-do-item__textbox {
+  flex: 1;
+}
+
+.to-do-item__checkbox:checked,
+.to-do-item__checkbox:checked + .to-do-item__label {
+  opacity: 0.6;
+}
+  .to-do-item__checkbox:checked + .to-do-item__label {
+    text-decoration: line-through;
+  }
+
+.to-do-item__edit-button,
+.to-do-item__save-button {
+  margin-left: auto;
+}

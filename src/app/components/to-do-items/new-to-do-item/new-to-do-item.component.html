@@ -1,6 +1,6 @@
 <form [formGroup]="form" class="to-do-item">
-  <div class="form-control">
-    <input type="text" class="form-control__control to-do-item__textbox" formControlName="valueTextBox" />
+  <div class="form-control to-do-item__textbox-wrapper">
+    <input type="text" class="form-control__control to-do-item__textbox" formControlName="valueTextBox" id="textbox" />
     <div class="form-control__validation-message" *ngIf="valueTextBox.touched && valueTextBox.invalid">Please enter some value here.</div>
   </div>
 

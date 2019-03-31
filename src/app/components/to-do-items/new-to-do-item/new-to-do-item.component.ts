@@ -20,6 +20,7 @@ export class NewToDoItemComponent implements OnInit {
     this.form = this.formBuilder.group({
       valueTextBox: [null, [CustomValidators.notEmptyNorWhitespace]]
     });
+    document.getElementById("textbox").focus();
   }
 
   public onSave() {

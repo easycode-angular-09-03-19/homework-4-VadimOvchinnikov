@@ -28,7 +28,10 @@ export class ToDoItemComponent implements OnInit {
 
   public onToggleCompleteness() { this.item.completed = !this.item.completed; }
 
-  public onEdit() { this.isEditing = true; }
+  public onEdit() {
+    this.isEditing = true;
+    setTimeout(() => document.getElementById(`textbox${this.item.id}`).focus(), 0);
+  }
 
   public onSave() {
     if (this.form.valid) {

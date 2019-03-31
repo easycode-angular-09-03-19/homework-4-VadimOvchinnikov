@@ -28,7 +28,7 @@ label {
   border-color: transparent;
 }
 
-input[type=text].ng-invalid {
+input[type=text].ng-invalid.ng-touched {
   border-color: #ff0000;
 }
 

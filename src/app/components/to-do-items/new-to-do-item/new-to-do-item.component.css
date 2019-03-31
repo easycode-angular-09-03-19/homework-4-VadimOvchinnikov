@@ -6,8 +6,12 @@
   margin-top: 2px;
 }
 
-.to-do-item__textbox {
+.to-do-item__textbox-wrapper {
   flex: 1;
+}
+
+.to-do-item__textbox {
+  align-self: stretch;
 }
 
 .to-do-item__edit-button,

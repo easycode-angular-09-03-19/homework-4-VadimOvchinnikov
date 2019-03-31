@@ -1,9 +1,9 @@
 <form [formGroup]="form" class="to-do-item" [ngClass]="{ 'to-do-item--completed': item.completed }">
-  <input type="checkbox" class="to-do-item__checkbox" [checked]="item.completed" (click)="onToggleCompleteness()" [id]="item.id" [disabled]="isEditing" />
+  <input type="checkbox" class="to-do-item__checkbox" [checked]="item.completed" (click)="onToggleCompleteness()" [id]="'checkbox' + item.id" [disabled]="isEditing" />
 
-  <label [for]="item.id" class="to-do-item__label" *ngIf="!isEditing">{{item.value}}</label>
-  <div class="form-control">
-    <input type="text" class="form-control__control to-do-item__textbox" formControlName="valueTextBox" *ngIf="isEditing" />
+  <label [for]="'checkbox' + item.id" class="to-do-item__label" *ngIf="!isEditing">{{item.value}}</label>
+  <div class="form-control to-do-item__textbox-wrapper">
+    <input type="text" class="form-control__control to-do-item__textbox" formControlName="valueTextBox" *ngIf="isEditing" [id]="'textbox' + item.id" />
     <div class="form-control__validation-message" *ngIf="valueTextBox.touched && valueTextBox.invalid">Please enter some value here.</div>
   </div>
 
